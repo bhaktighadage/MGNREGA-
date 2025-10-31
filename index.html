@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MGNREGA — Maharashtra Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <h1 id="title">🌿 MGNREGA Dashboard</h1>
+      <p id="subtitle">Maharashtra — District Performance</p>
+    </div>
+    <div class="header-right">
+      <button id="langToggle" class="lang-btn">मराठीत बघा</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="controls">
+      <label id="districtLabel" for="districtSelect">Select District</label>
+      <select id="districtSelect">
+        <option value="">-- Select district --</option>
+      </select>
+      <button id="loadBtn" class="primary">Load</button>
+      <div id="status" class="status">Loading...</div>
+    </section>
+
+    <section class="cards" id="cards" aria-live="polite">
+      <!-- summary cards inserted here -->
+    </section>
+
+    <section class="data-area">
+      <div class="table-wrap">
+        <table id="dataTable">
+          <thead>
+            <tr><th id="thMonth">Month</th><th id="thWorks">Works</th><th id="thPersondays">Person-days</th><th id="thExpenditure">Expenditure</th></tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+
+      <div class="chart-wrap">
+        <canvas id="perfChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small id="footerText">Developed by Bhakti Ghadage • Powered by MGNREGA Open API</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

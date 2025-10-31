@@ -1,0 +1,49 @@
+:root{
+  --green-700:#1b5e20;
+  --green-600:#2e7d32;
+  --green-300:#a5d6a7;
+  --bg:#e9f5e9;
+  --card:#ffffff;
+  --muted:#556b2f;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Noto Sans","Poppins",sans-serif;
+  background:var(--bg);
+  color:#163d16;
+}
+.site-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:linear-gradient(90deg,var(--green-700),var(--green-600));
+  color:#fff;padding:18px 22px;
+}
+.site-header h1{margin:0;font-size:1.35rem}
+.site-header p{margin:3px 0 0;font-size:0.9rem;opacity:0.95}
+.lang-btn{
+  background:#fff;color:var(--green-700);border-radius:8px;padding:8px 10px;border:none;cursor:pointer;font-weight:600
+}
+.main{max-width:1100px;margin:18px auto;padding:0 16px}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+label{font-weight:600;color:var(--muted)}
+select{padding:10px;border-radius:8px;border:2px solid var(--green-300);background:#f7fff7}
+.primary{background:var(--green-700);color:white;padding:10px 14px;border-radius:8px;border:none;cursor:pointer}
+.status{margin-left:auto;color:#33691e;font-weight:600}
+.cards{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.card{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.06);flex:1;min-width:180px}
+.card h3{margin:0 0 6px;font-size:0.95rem;color:var(--green-700)}
+.card p{margin:0;font-size:1.15rem;font-weight:700}
+.data-area{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start}
+.table-wrap{flex:1;min-width:320px}
+.chart-wrap{flex:1;min-width:320px;padding:8px;background:var(--card);border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,0.04)}
+table{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden}
+th,td{padding:10px;border-bottom:1px solid #e6f2e6;text-align:left}
+th{background:linear-gradient(90deg,var(--green-600),var(--green-300));color:#fff;font-weight:700}
+.site-footer{text-align:center;padding:12px;margin-top:24px;color:#2f5a2f}
+@media(max-width:760px){
+  .cards{flex-direction:column}
+  .data-area{flex-direction:column}
+  .status{width:100%;text-align:left}
+}
